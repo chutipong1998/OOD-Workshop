@@ -6,6 +6,34 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MyRangeTest {
 
     @Test
+    public void case01() {
+        MyRange myRange = new MyRange("[1,5]");
+        String result = myRange.getResult();
+        assertEquals("1,2,3,4,5", result);
+    }
+
+    @Test
+    public void case02() {
+        MyRange myRange = new MyRange("(1,5]");
+        String result = myRange.getResult();
+        assertEquals("2,3,4,5", result);
+    }
+
+    @Test
+    public void case03() {
+        MyRange myRange = new MyRange("[1,5)");
+        String result = myRange.getResult();
+        assertEquals("1,2,3,4", result);
+    }
+
+    @Test
+    public void case04() {
+        MyRange myRange = new MyRange("(1,5)");
+        String result = myRange.getResult();
+        assertEquals("2,3,4", result);
+    }
+
+    @Test
     @DisplayName("ข้อมูล [1,5] จะขึ้นต้นด้วย [ ผลลัพะ์ที่ได้คือ true")
     public void startWithInclude() {
         MyRange myRange = new MyRange("[1,5]");

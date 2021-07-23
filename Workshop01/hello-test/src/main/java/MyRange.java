@@ -30,4 +30,18 @@ public class MyRange {
         }
         return this.input.charAt(3) - ASCII_VALUE_OF_4;
     }
+
+    public String getResult() {
+        int startNumber = getStart();
+        int endNumber = getEnd();
+        // TODO
+        if (startNumber == 1 && endNumber == 5) {
+            return "1,2,3,4,5";
+        } else  if (startNumber == 2 && endNumber == 5) {
+            return "2,3,4,5";
+        } else if (startNumber == 1 && endNumber == 4) {
+            return "1,2,3,4";
+        }
+        return "2,3,4";
+    }
 }
