@@ -1,6 +1,8 @@
 public class MyRange {
     public static final int ASCII_VALUE_OF_1 = 48;
     public static final int ASCII_VALUE_OF_2 = 47;
+    public static final int ASCII_VALUE_OF_5 = 48;
+    public static final int ASCII_VALUE_OF_4 = 49;
     private final String input;
 
     public MyRange(String input) {
@@ -18,10 +20,14 @@ public class MyRange {
         return this.input.startsWith("[");
     }
 
+    public Boolean isEndWithInclude() {
+        return this.input.endsWith("]");
+    }
+
     public int getEnd() {
-        if(!isStartWithInclude()) {
-            return this.input.charAt(1) - ASCII_VALUE_OF_1;
+        if(isEndWithInclude()) {
+            return this.input.charAt(3) - ASCII_VALUE_OF_5;
         }
-        return -1;
+        return this.input.charAt(3) - ASCII_VALUE_OF_4;
     }
 }

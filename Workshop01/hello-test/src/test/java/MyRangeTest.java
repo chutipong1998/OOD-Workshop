@@ -35,4 +35,32 @@ public class MyRangeTest {
         assertEquals(2, result);
     }
 
+    @Test
+    public void endWithInclude() {
+        MyRange myRange = new MyRange("[1,5]");
+        Boolean result = myRange.isEndWithInclude();
+        assertTrue(result);
+    }
+
+    @Test
+    public void endWithExclude() {
+        MyRange myRange = new MyRange("[1,5)");
+        Boolean result = myRange.isEndWithInclude();
+        assertFalse(result);
+    }
+
+    @Test
+    public void endNumberWithInclude() {
+        MyRange myRange = new MyRange("[1,5]");
+        int result = myRange.getEnd();
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void endNumberWithExclude() {
+        MyRange myRange = new MyRange("[1,5)");
+        int result = myRange.getEnd();
+        assertEquals(4, result);
+    }
+
 }
