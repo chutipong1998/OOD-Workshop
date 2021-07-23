@@ -32,7 +32,7 @@ public class MyRangeTest {
     public void startNumberWithExclude() {
         MyRange myRange = new MyRange("(1,5]");
         int result = myRange.getStart();
-        assertEquals(1, result);
+        assertEquals(2, result);
     }
 
 }

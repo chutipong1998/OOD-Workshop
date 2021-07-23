@@ -1,5 +1,6 @@
 public class MyRange {
     public static final int ASCII_VALUE_OF_1 = 48;
+    public static final int ASCII_VALUE_OF_2 = 47;
     private final String input;
 
     public MyRange(String input) {
@@ -9,10 +10,8 @@ public class MyRange {
     public int getStart() {
         if(isStartWithInclude()) {
             return this.input.charAt(1) - ASCII_VALUE_OF_1;
-        } else if (!isStartWithInclude()) {
-            return this.input.charAt(1) - ASCII_VALUE_OF_1;
         }
-        return -1;
+        return this.input.charAt(1) - ASCII_VALUE_OF_2;
     }
 
     public Boolean isStartWithInclude() {
