@@ -18,7 +18,7 @@ class LocalBankAccount implements BankAccountProcess {
 class InterBankAccount implements BankAccountProcess {
 
     public void transferMoney(BankAccount target, double amount) {
-        throw new RuntimeException("Not supported this operation");
+        // Inter
     }
 }
 
