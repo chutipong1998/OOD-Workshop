@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GenerateServiceTest {
-
+public class GenerateIdServiceTest {
     @Test
     @DisplayName("ต้องได้ id=XYZ7")
     public void case01() {
