@@ -1,11 +1,8 @@
-class BankAccount {
-
+public class BankAccount {
 }
 
 interface BankAccountProcess {
-
     public void transferMoney(BankAccount target, double amount);
-
 }
 
 class LocalBankAccount implements BankAccountProcess {
