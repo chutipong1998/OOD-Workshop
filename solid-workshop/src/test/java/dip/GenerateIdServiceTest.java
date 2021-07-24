@@ -7,10 +7,15 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Random7 extends Random {
+class RandomX extends Random {
+    long number;
+    public RandomX(long seed) {
+        number = seed;
+    }
+
     @Override
     public int nextInt(int bound) {
-        return 7;
+        return (int) number;
     }
 }
 
@@ -19,7 +24,7 @@ public class GenerateIdServiceTest {
     @DisplayName("ต้องได้ id=XYZ7")
     public void case01() {
         GenerateIdService service = new GenerateIdService();
-        service.setRandom(new Random7());
+        service.setRandom(new RandomX(7));
         String id = service.getId();
         assertEquals("XYZ7", id);
     }
